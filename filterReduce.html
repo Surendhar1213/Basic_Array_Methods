@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Filter & Reduce Method</h1>
+
+    <script>
+        // Filter - return new array by checking each value of original arr using call back fn.
+
+        let numbers = [35,75,218,33,101,58,108,70];
+
+        let newnumber = numbers.filter(value => value < 100);
+        console.log(newnumber);
+
+        let evennum = numbers.filter(x => x%2==0);
+        console.log(numbers);
+        console.log(evennum);
+
+
+        // Reduce - Array ahh oru single value ku reduce pannum
+
+        const number = [1,4,6,7,8,5];
+        let mul = number.reduce((curr,num)=> curr * num);
+        console.log(mul);
+
+        let cost = [35,234,12,34,54,123]
+        let total = cost.reduce((tota,ele)=>tota+ele,500);
+        console.log(total);
+        
+        
+
+        
+        
+        
+
+    </script>
+</body>
+</html>

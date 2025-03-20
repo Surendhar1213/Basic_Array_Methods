@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForEach MEthods</title>
+</head>
+<body>
+
+    <h2>ForEach methods for arrays js</h2>
+    <p id="result"></p>
+
+
+    <script>
+        document.getElementById("result");
+        
+        
+        //  1. ForEach 
+        const number = [1,2,3,4,5,6,7,8,9,10];
+        // value ,index,array 
+        number.forEach((output,index)=>{
+            console.log(index +""+output);
+            
+        })
+//  multiple objects vachii
+        const usernames = [{fullname:"Surendhar",Age:21,City:"Kanchupuram",Salary:13000},
+        {fullname:"Sakthi",Age:21,City:"maduranthakam",Salary:15000},
+        {fullname:"MohanRaj",Age:29,City:"Kayapakkam",Salary:130000},
+        {fullname:"Karthi",Age:24,City:"Kanchupuram",Salary:18000},
+        {fullname:"thanigaivel",Age:48,City:"Kanchupuram",Salary:100000},
+        ];
+
+         usernames.forEach( (names,index) => {
+        //  if(names.Age > 25 ){
+            //  console.log(`${names.fullname} is old than 29`);   age ahh filter panna chumma sample
+                
+                // }
+                console.log(`${index + 1}.${names.fullname} is ${names.Age} years old lives on ${names.City}`);
+                
+            })
+        console.table(usernames);
+
+        
+    </script>
+    
+</body>
+</html>

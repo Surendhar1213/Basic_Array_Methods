@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flat and FlatMap()</title>
+</head>
+<body>
+    <h1>Flate and FlatMap Array Methods</h1>
+
+    <script>
+        // flat()
+        const matrix = [
+            [1,2,3],
+            [4,[5,55,555,555],6],
+            [7,8,9],
+        ];
+       let res=  matrix.flat(2);
+       console.log(res);
+
+       //flatMap()
+
+       const arr = [1,2,3];
+      const newarr=  arr.flatMap(num => num === 2 ? [22,222,222]:0);
+       console.log(newarr);
+       
+       const sum = arr.flatMap(num => [num, num * 2]);
+       console.log(sum);
+       
+       
+        
+
+
+    </script>
+    
+</body>
+</html>

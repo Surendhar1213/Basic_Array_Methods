@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Array Methods</title>
+    
+</head>
+<body>
+    <h1>Sort Methods</h1>
+    
+
+    <Script>
+        // Sort Method
+
+        const names =["Surendhar","Angular","Boostrap","React","Javascript"];
+        console.log("Before Sort:"+''+names);
+        names.sort();
+        console.log("After Sort:"+names);
+
+        // Numbers Sort
+        const Numbers = [198,675,12,980,239,1,99];
+        console.log("Before Sort Numbers:"+" "+Numbers);
+        Numbers.sort()
+        console.log("After Sort Numbers:"+" "+Numbers);
+// Ascending
+        Numbers.sort((a,b)=>{
+            return a-b;
+        });
+        console.log("New Sort Assending:"+" "+Numbers);
+// descending
+        Numbers.sort((a,b)=>{
+            return b-a;
+        });
+        console.log("New Sort for Decending:"+" "+Numbers);
+
+        // Complex data for ascending or descending
+        const user=  [{fullname:"apple",Age:15,City:"Kanchipuram",Salary:13000},
+    {fullname:"Velu",Age:21,City:"maduranthakam",Salary:120000},
+    {fullname:"MohanRaj",Age:29,City:"Kayapakkam",Salary:130000},
+    {fullname:"Karthi",Age:20,City:"Kanchipuram",Salary:18000},
+    {fullname:"thanigaivel",Age:48,City:"Kanchipuram",Salary:100000},
+    ];
+    
+    console.table(user)
+
+    user.sort((age,newage)=>{
+        return age.Age-newage.Age;
+    })
+    console.table(user);
+
+    user.sort((name,newname)=>{
+        return name.fullname.localeCompare(newname.fullname)    ;
+    });
+    console.table(user)
+
+    // Task 
+    const Arr = [198,675,12,980,239,1,99];
+    for(let i = 0;i<Arr.length;i++){
+        Arr.sort((a,b)=> a-b); //Ascending order
+        console.log("Ascending Order:"+" "+ Arr);
+    };
+    for(let i=0;i<=Arr.length;i++){
+        Arr.sort((a,b)=> b-a);  // Descending Order
+    }
+    console.log("descending Order:"+" "+ Arr);
+
+
+    
+
+        
+        
+        
+    </Script>
+    
+</body>
+</html>

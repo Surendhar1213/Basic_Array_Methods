@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some & Every</title>
+</head>
+<body>
+    <h3>Welcome to the Some And Every</h3>
+
+    <script>
+        let number = [8,20,14,36,48,57];
+        // arrow function using
+        let res = number.every((ele)=>ele%2==0);
+        console.log(res);
+
+        let values = [13,25,35,55,61];
+        console.log(values.some((curr)=>curr%2==0));
+
+
+        // function using
+        function iseven(value){
+            return value % 2==0;
+        }
+        let results = number.some(iseven);
+        console.log(results);
+
+
+        // object using check for age
+        const user = [
+            {Name:"surendhar",age:19},
+            {Name:"Velu",age:22},
+            {Name:"Mohan",age:27},
+            {Name:"Karthi",age:12},
+    ];
+    function iseligible(element){
+        return element.age >=18;
+    }
+    let newval = user.some(iseligible);
+    console.log(newval);
+    
+        
+        
+        
+       
+        
+
+        
+        
+    </script>
+    
+</body>
+</html>

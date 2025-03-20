@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <h1>Array Map Method</h1>
+
+    <script>
+        //  Map (value,index,array) => executes callback foreach array element and returns new array
+
+
+    const Mapnumbers = [1,2,3,4,5,6,7,8,9,10];
+
+    let squares = Mapnumbers.map((values)=> values*2)
+    console.log(squares);
+
+    let sqrt = Mapnumbers.map((newval)=>{
+        return Math.sqrt(newval).toFixed(2)
+    });
+    console.log(sqrt);
+
+
+// Map complex data vachii
+
+   const user=  [{fullname:"Surendhar",Age:15,City:"Kanchipuram",Salary:13000},
+    {fullname:"Sakthi",Age:21,City:"maduranthakam",Salary:15000},
+    {fullname:"MohanRaj",Age:29,City:"Kayapakkam",Salary:130000},
+    {fullname:"Karthi",Age:20,City:"Kanchipuram",Salary:18000},
+    {fullname:"thanigaivel",Age:48,City:"Kanchipuram",Salary:100000},
+    ];
+
+    const eligible_sts = user.map((newuser)=>({
+        // Name:newuser.fullname,
+        // age:newuser.Age,
+        // city:newuser.City,
+        // salary:newuser.Salary,
+        // manual ahh pandrathu vida using spred operator vachii potalam
+        ...newuser,
+        Status:newuser.Age >=18 ? "Eligibile" : "Not Eligible",
+        newcity:newuser.City === "Kanchipuram" ? "Kanchipuram" : "invalid for the content", 
+    }));
+    console.table(eligible_sts);
+
+    let priceUSD = [20,35,13];
+
+    let priceINR = priceUSD.map((x)=>{
+        return x*83;
+    })
+    console.log(priceINR);
+
+    function convert(element){
+        return element*83;
+    }
+    let newval = priceUSD.map(convert);
+    console.log(newval);
+    
+    
+    </script>
+    
+</body>
+</html>
